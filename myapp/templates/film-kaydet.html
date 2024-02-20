@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+<title>Film Kaydet</title>
+{% endblock title %}
+
+
+    {% block content %}
+    
+     <h1 class="text-center" > Film Kaydet</h1>
+
+  
+       
+   
+        <form method="POST" novalidate enctype="multipart/form-data">
+            {% csrf_token %}  
+            {% for field in form %}
+            <label for=""> {{field.label}} </label>
+            {{field}}
+            {% endfor %}
+            <input type="submit" value="Kaydet">
+          
+        </form>
+      
+      
+      
+     
+      
+      
+
+      {% endblock content %}
+
+

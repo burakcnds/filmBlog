@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+<title>Anasayfa</title>
+{% endblock title %}
+
+
+    {% block content %}
+   
+     
+
+     
+     
+
+    
+        
+      <div class="container">
+        <div class="category-section d-flex justify-content-center mt-4">
+          <ul class="list-unstyled d-flex gap-4">
+            {% for kategori in kategoriler %}
+            <li>
+              <a class="text-decoration-none text-dark fs-4 border border-1 border-black rounded-3 m-2 p-2" 
+              href="{% url "film-sayfasi" kategori.slug %}"> {{kategori.name}}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+
+
+
+
+
+      {% comment %} <div class="row">
+      
+          {% for film in filmler %}
+          <div class="col-3">
+          <div class="card" style="width: 18rem;">
+            <img src="{% static 'media/'|add:film.image_url %}" class="card-img-top" alt="">    
+            <div class="card-body">
+              <h5 class="card-title"> {{film.title}} </h5>
+              <p class="card-text"> {{film.description}} </p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+          
+        </div>
+        {% endfor %}
+      </div> {% endcomment %}
+      
+      
+      {% endblock content %}
+
+
+    
+
+

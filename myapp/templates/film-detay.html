@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+<title>Film Detay</title>
+{% endblock title %}
+
+
+    {% block content %}
+    
+     <h1 class="text-center" > Film Detay </h1>
+
+      
+      
+     
+      
+        <div class="row">
+      
+          
+          <div class="col-3 ms-2 mt-2">
+          <div class="card" style="width: 18rem;">
+            <div class="card-header">
+              <h5 class="card-title text-center"> {{film.title}} </h5>
+            </div>
+           
+            <div class="card-body">
+              <img src="{{film.image.url}}" class="card-img-top" alt="">    
+
+            </div>
+            <div class="card-footer">
+              <p class="card-text text-center"> {{film.description}} </p>
+              <div class="text-center">
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+             
+            </div>
+          </div>
+          
+        </div>
+       
+      </div> 
+     
+     
+      
+      
+
+      {% endblock content %}
+
+
